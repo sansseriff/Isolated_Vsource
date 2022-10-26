@@ -1,0 +1,11 @@
+
+build command: 
+docker build -t vsource_controll .
+
+run command:
+# to make a new container from updated image:
+docker run -d --restart unless-stopped --name vsource_controll_container -p 80:80 vsource_controll 
+
+
+# to run existing container
+docker run -d -p 80:80 vsource_controll -d --restart unless-stopped

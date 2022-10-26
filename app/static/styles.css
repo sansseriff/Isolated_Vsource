@@ -1,0 +1,242 @@
+* {
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Roboto Flex", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebeef2;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-size: large;
+  padding: 0.3rem 0.3rem;
+  margin: 0.5rem;
+  border-width: 1.5px;
+  box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0.3rem;
+  padding-bottom: 0.7rem;
+}
+
+.fa-solid {
+  color: #4f6ea1;
+}
+
+.ch {
+  flex: 1;
+  color: darkgrey;
+  font-size: xx-large;
+  /* justify-content: space-evenly; */
+  /* justify-content: center; */
+  /* justify-content: space-between; usefule for having space bewtten but not on the edges */
+  /* use flex-basis instead of width */
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding-left: 0.5rem;
+  padding-top: 0.5rem; */
+  /* padding-bottom: ; */
+}
+
+/* button {
+  border-style: none;
+} */
+
+.tick-button {
+  flex: 1;
+  border-style: none;
+  padding: 0.3rem 0.3rem;
+  border-radius: 0.15rem;
+  border-width: 1;
+  background-color: #98b5eb;
+  font-size: large;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.button-top {
+  /* margin: 10px; */
+}
+
+.button-bottom {
+  /* margin: 10px; */
+}
+
+/* #send-button {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  flex-basis: 30%;
+} */
+
+.button-set {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  /* margin-left: 0.3rem;
+  margin-right: 0.3rem; */
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  /* padding-left: 0rem;
+  padding-right: 0.5rem; */
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  /* align-items: stretch; */
+  /* align-conent:  */
+}
+
+.button-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  align-content: space-between;
+}
+
+.bttop {
+  margin-bottom: 0.1rem;
+}
+
+.btbottom {
+  margin-top: 0.1rem;
+}
+
+.voltage_box {
+  flex: 1;
+  font-size: 3rem;
+  box-sizing: border-box;
+  /* display: flex; */
+  /* flex-direction: column; */
+  border-width: 1;
+  border-color: #d8dfe8;
+  border-radius: 0.15rem;
+  background-color: #ebeef2;
+  border-style: solid;
+  padding-left: 0.5rem;
+  align-items: center;
+  flex-basis: 100%;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.data {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.number {
+  /* color: red; */
+  /* flex: 1; */
+}
+
+.number-off {
+  color: lightgray !important;
+}
+
+.number-on {
+  color: black !important;
+}
+
+.unit {
+  /* display: inline; */
+  padding-left: 0.8rem;
+  /* flex: 1; */
+  color: #4f6ea1;
+}
+
+.label {
+  display: inline;
+  color: #4f6ea1;
+  padding-left: 0.3rem;
+}
+
+/* .button-set {
+  display: block;
+  width: 100%;
+} */
+
+h3 {
+  display: block;
+  /* flex: 1; */
+}
+
+input {
+  /* flex: 1; */
+  font-size: x-large;
+  width: 50%;
+  border-width: 1;
+  border-color: #d8dfe8;
+  border-style: solid;
+  border-radius: 0.15rem;
+  /* margin-left: 0.3rem;
+  margin-right: 0.3rem; */
+}
+
+.btn {
+  width: 35%;
+  /* flex: 1; */
+  padding: 0.5rem;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
+  margin-left: 0.5rem;
+
+  border-style: solid;
+  border-radius: 0.15rem;
+
+  font-size: x-large;
+  /* transition-duration: 0.4s; */
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  background-color: #98b5eb;
+  border-color: #89a6d1;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #98b5eb;
+  border-color: #89a6d1;
+}
+
+.state {
+  /* margin-left: 0;
+  margin-right: 0; */
+  background-color: grey;
+  border-color: darkgrey;
+  white-space: nowrap
+}
+
+.state-turn-off {
+  background-color: #fc5e5e !important;
+  border-color: #dd4d4d !important;
+  white-space: nowrap
+}
+
+.state-turn-on {
+  background-color: #6fc969 !important;
+  border-color: #4fa349 !important;
+  white-space: nowrap
+}
+
+
+.zero:hover {
+  background-color: #c04040;
+}
+
+.submit:hover {
+  background-color: #5674ac;
+}

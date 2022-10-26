@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSource Front End</title>
+    <link rel="shortcut icon" href="">
+    <script src="https://kit.fontawesome.com/676a4c7e7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Flex:opsz@8..144&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+</head>
+
+<body>
+    <div class="ui">
+        <div class="box" id="1">
+            <div class="row">
+                <div class="ch"> Channel 1</div>
+            </div>
+            <div class="row">
+                <!-- <div class="col"> -->
+                <div class="button-set">
+                    <div class="button-row bttop">
+                        <i id="1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.01" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.001" class="tick-button fa-solid fa-angle-up"></i>
+                    </div>
+                    <div class="button-row btbottom">
+                        <i id="-1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.01" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.001" class="tick-button fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="voltage_box">
+                    <div class="data">
+                        <div class="number">{{voltage_1}}</div>
+                        <div class="unit">V</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <input type="number" class="voltage_input" type="text">
+                <button class="btn submit" type="submit" name="action">Submit
+                </button>
+                <button class="btn state" type="submit" name="action">Turn Off
+                </button>
+            </div>
+        </div>
+
+        <div class="box" id="2">
+            <div class="row">
+                <div class="ch"> Channel 2</div>
+            </div>
+            <div class="row">
+                <!-- <div class="col"> -->
+                <div class="button-set">
+                    <div class="button-row bttop">
+                        <i id="1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.01" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.001" class="tick-button fa-solid fa-angle-up"></i>
+                    </div>
+                    <div class="button-row btbottom">
+                        <i id="-1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.01" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.001" class="tick-button fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="voltage_box">
+                    <div class="data">
+                        <div class="number">{{voltage_2}}</div>
+                        <div class="unit">V</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <input type="number" class="voltage_input" type="text">
+                <button class="btn submit" type="submit" name="action">Submit
+                </button>
+                <button class="btn state" type="submit" name="action">Turn Off
+                </button>
+            </div>
+        </div>
+
+        <div class="box" id="3">
+            <div class="row">
+                <div class="ch"> Channel 3</div>
+            </div>
+            <div class="row">
+                <!-- <div class="col"> -->
+                <div class="button-set">
+                    <div class="button-row bttop">
+                        <i id="1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.01" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.001" class="tick-button fa-solid fa-angle-up"></i>
+                    </div>
+                    <div class="button-row btbottom">
+                        <i id="-1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.01" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.001" class="tick-button fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="voltage_box">
+                    <div class="data">
+                        <div class="number">{{voltage_3}}</div>
+                        <div class="unit">V</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <input type="number" class="voltage_input" type="text">
+                <button class="btn submit" type="submit" name="action">Submit
+                </button>
+                <button class="btn state" type="submit" name="action">Turn Off
+                </button>
+            </div>
+        </div>
+
+        <div class="box" id="4">
+            <div class="row">
+                <div class="ch"> Channel 4</div>
+            </div>
+            <div class="row">
+                <!-- <div class="col"> -->
+                <div class="button-set">
+                    <div class="button-row bttop">
+                        <i id="1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.1" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.01" class="tick-button fa-solid fa-angle-up"></i>
+                        <i id="0.001" class="tick-button fa-solid fa-angle-up"></i>
+                    </div>
+                    <div class="button-row btbottom">
+                        <i id="-1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.1" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.01" class="tick-button fa-solid fa-angle-down"></i>
+                        <i id="-0.001" class="tick-button fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="voltage_box">
+                    <div class="data">
+                        <div class="number">{{voltage_4}}</div>
+                        <div class="unit">V</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <input type="number" class="voltage_input" type="text">
+                <button class="btn submit" type="submit" name="action">Submit
+                </button>
+                <button class="btn state" type="submit" name="action">Turn Off
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function st(x) {
+        return Number.parseFloat(x).toFixed(3);
+    }
+
+    const controller = new AbortController()
+    const signal = controller.signal
+
+    let State = null // to be update with result promise in apply_state
+
+    var voltage_divs = [...document.querySelectorAll(".number")] // the brackets convert the node list to array
+
+    const units = [...document.querySelectorAll(".unit")]
+    voltage_numbers = voltage_divs.map(item => Number(item.innerHTML))
+    console.log(voltage_numbers)
+
+    const full_area = document.querySelector('.ui');
+    full_area.addEventListener('click', resolve_click);
+    var alert_active = 0
+
+    function resolve_click(e) {
+
+
+        // for tick buttons
+        if (e.target.id) {
+            adjustment = Number(e.target.id) // what tick level
+        }
+        else {
+            return 1;
+        }
+        channel = Number(e.target.parentElement.parentElement.parentElement.parentElement.id) //which channel are we in?
+        //console.log(adjustment)
+        if (channel == 1 || channel == 2 || channel == 3 || channel == 4) {
+            //console.log("channel is " + channel);
+            if (adjustment == 0.001 || adjustment == -0.001 || adjustment == 0.01 || adjustment == -0.01 || adjustment == 0.1 || adjustment == -0.1 || adjustment == 1 || adjustment == -1) {
+                //console.log("valid adjustment")
+                var new_voltage = st(Number(voltage_divs[channel - 1].innerHTML) + adjustment)
+                //voltage_divs[Number(channel) - 1].innerHTML = new_voltage
+
+                data = {
+                    "voltage": new_voltage,
+                    "channel": channel,
+                    "state": State[channel].state,
+                }
+                send_ch_info(data)
+            }
+
+
+        }
+    }
+
+    const submits = [...document.querySelectorAll('.btn.submit')]
+    //console.log(submits)
+    submits.forEach((submit) => submit.addEventListener('click', submit_voltage));
+
+    const state_buttons = [...document.querySelectorAll(".btn.state")]
+    //console.log(state_buttons)
+    state_buttons.forEach((state_button) => state_button.addEventListener('click', update_state));
+
+
+    get_state()
+
+
+
+    const inputs = document.querySelectorAll(".voltage_input")
+
+    //var voltage_number = document.querySelector(".number")
+
+
+    function submit_voltage(e) {
+        //console.log(e.target.parentElement.parentElement.id)
+        var channel = Number(e.target.parentElement.parentElement.id)
+
+        //console.log(e.target.parentElement.children[0])
+        const input = e.target.parentElement.children[0]
+
+        //console.log(input)
+
+        if (input.value != '') {
+            console.log("sending:");
+            data = {
+                "voltage": input.value,
+                "channel": channel,
+                "state": State[channel].state
+            }
+            validated_data = send_ch_info(data);
+            input.value = ''
+
+        }
+    }
+
+    // a generic data sending function that is called from the use of the submit button or the tic buttons
+    function send_ch_info(data) {
+
+        if (data.voltage > 5.0) {
+            data.voltage = 5.0
+        }
+
+        if (data.voltage < -5.0) {
+            data.voltage = -5.0
+        }
+        State[data.channel].voltage = data.voltage
+        State[data.channel].state = data.state
+
+        fetch("/submit", {
+            method: "POST",
+            signal: signal,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(res => res.json()).then(data => {
+            State[data.channel].voltage = data.voltage
+            State[data.channel].state = data.state
+            apply_state(State)
+        }).catch(error => console.log("catched 2", error))
+    }
+
+    function update_state(e) {
+        channel = Number(e.target.parentElement.parentElement.id)
+        var st = ''
+        if (State[channel].state == 'off') {
+            st = 'on'
+        }
+        if (State[channel].state == 'on') {
+            st = 'off'
+        }
+
+        console.log(" channel ", channel, " is: ", st)
+
+        data = {
+            "voltage": State[channel].voltage,
+            "channel": channel,
+            "state": st
+        }
+        send_ch_info(data)
+
+    }
+
+    function get_state() {
+        fetch('/full-state', {
+            method: 'get',
+            signal: signal,
+        })
+            .then(response => response.json())
+            .then(data => apply_state(data));
+    }
+
+    function apply_state(state) {
+        State = state
+        for (var i = 1; i < 5; i++) {
+            //console.log(state[i])
+            voltage = state[i].voltage
+            state_button = state_buttons[i - 1]
+            voltage_div = voltage_divs[i - 1]
+            unit = units[i - 1]
+            if (state[i].state == 'on') {
+                state_button.innerHTML = "Turn Off";
+                state_button.classList.remove('state-turn-on')
+                state_button.classList.add('state-turn-off')
+                voltage_div.classList.remove('number-off')
+                voltage_div.classList.add('number-on')
+                unit.classList.remove('number-off')
+                unit.classList.add('number-on')
+                //unit.style.color = 'lightgrary'
+            }
+            else {
+                state_button.innerHTML = "Turn On"
+                state_button.classList.remove('state-turn-off')
+                state_button.classList.add('state-turn-on')
+                voltage_div.classList.remove('number-on')
+                voltage_div.classList.add('number-off')
+                unit.classList.remove('number-on')
+                unit.classList.add('number-off')
+                //console.log(unit)
+            }
+            voltage_div.innerHTML = state[i].voltage
+
+        }
+    }
+
+    // client asks server for updates every second.
+    var intervalID = setInterval(update, 1000);
+
+    function update() {
+        // console.log("updating")
+        fetch('/full-state', {
+            method: 'get',
+            signal: signal,
+        })
+            .then(response => response.json())
+            .then(data => apply_state(data)).catch(error => comm_error());
+    }
+
+    function comm_error() {
+        if (alert_active == 0) {
+            alert_active = 1
+            controller.abort(); // stop sending fetch requests
+            for (var i = 1; i < 5; i++) {
+                state_button = state_buttons[i - 1]
+                state_button.classList.remove('state-turn-off')
+                state_button.classList.remove('state-turn-on')
+            }
+            setTimeout(alert(`Error Communicating with Web Server.
+            The webserver runs in a docker container on 
+            a raspberry pi in the lab with ip address
+            10.7.0.137. `), 100)
+            
+        }
+    }
+
+
+
+</script>
+
+</html>
