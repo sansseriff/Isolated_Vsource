@@ -167,9 +167,50 @@
             </div>
         </div>
     </div>
+    <!-- <button id="myBtn">Open Modal</button> -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Error Communicating with Web Server.</h3>
+            <p><br>
+                <b>Troubleshooting:</b><br>
+                - Take a picture of these steps in case you loose this window. <br>
+                - Try refreshing the page<br>
+                - Check if the raspberry pi running the webserver is on the network:<br>
+                'ssh pi@10.7.0.137'<br>
+                - If you can log in to the pi, check docker container status:<br>
+                'docker ps'
+                - Check on the Wiki for futher troubleshooting steps and info.
+            </p>
+        </div>
+
+    </div>
 </body>
 
 <script>
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // btn.onclick = function () {
+    //     modal.style.display = "block";
+    // }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
     function st(x) {
         return Number.parseFloat(x).toFixed(3);
@@ -318,6 +359,7 @@
 
     function apply_state(state) {
         State = state
+        modal.style.display = "none";
         for (var i = 1; i < 5; i++) {
             //console.log(state[i])
             voltage = state[i].voltage
@@ -362,21 +404,29 @@
             .then(data => apply_state(data)).catch(error => comm_error());
     }
 
+
+
     function comm_error() {
-        if (alert_active == 0) {
-            alert_active = 1
-            controller.abort(); // stop sending fetch requests
-            for (var i = 1; i < 5; i++) {
-                state_button = state_buttons[i - 1]
-                state_button.classList.remove('state-turn-off')
-                state_button.classList.remove('state-turn-on')
-            }
-            setTimeout(alert(`Error Communicating with Web Server.
-            The webserver runs in a docker container on 
-            a raspberry pi in the lab with ip address
-            10.7.0.137. `), 100)
-            
+        console.log("Error communicating with server!")
+        // if (alert_active == 0) {
+        //     alert_active = 1
+        // controller.abort(); // stop sending fetch requests
+        for (var i = 1; i < 5; i++) {
+            state_button = state_buttons[i - 1]
+            state_button.classList.remove('state-turn-off')
+            state_button.classList.remove('state-turn-on')
         }
+        // setTimeout(alert(`Error Communicating with Web Server. \n
+        // Troubleshooting:
+        // - Try refreshing the page\n
+        // - Check if raspberry pi running webserver is on network:\n
+        //     'ssh pi@10.7.0.137'
+        // - If you can log in to the pi, check docker container status:\n
+        //     'docker ps'
+        // `), 100)
+        modal.style.display = "block";
+
+        // }
     }
 
 

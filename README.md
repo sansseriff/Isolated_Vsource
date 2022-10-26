@@ -10,8 +10,13 @@ A webserver using FastAPI for interfacing with a UDP-controlled isolated voltage
 
 -- Andrew Mueller 2022
 
-The webserver is packaged using docker. Docker commands to deloy or build the container:
+The webserver is packaged using docker. Docker commands to deploy or build the container:
 
+
+### Stop and remove existing container:
+```console
+docker rm -f vsource_controll_container
+```
 
 ### Build command:
 ```console
@@ -28,5 +33,10 @@ docker run -d --restart unless-stopped --name vsource_controll_container -p 80:8
 ### to run existing container
 ```console
 docker run -d -p 80:80 vsource_controll -d --restart unless-stopped
+```
+
+Note: if you're changing something like CSS, you might need to rebuild the container with no cache:
+```console
+docker build -t vsource_controll . --no-cache
 ```
 
