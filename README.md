@@ -2,11 +2,16 @@
 
 A webserver using FastAPI for interfacing with a UDP-controlled isolated voltage source. The frontend is written in vanilla html and javascript.
 
-The webserver is packaged using docker. Docker commands to deloy or build the container:
+<!-- <img style="display: block; margin-left: auto; margin-right: auto; width: 30%" src="GUI.PNG"> -->
+
+<p align="center">
+  <img width="300" src="GUI.PNG">
+</p>
 
 -- Andrew Mueller 2022
 
-<img style="display: block; margin-left: auto; margin-right: auto; width: 30%" src="GUI.PNG">
+The webserver is packaged using docker. Docker commands to deloy or build the container:
+
 
 ### Build command:
 ```console
